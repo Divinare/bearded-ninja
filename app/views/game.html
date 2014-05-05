@@ -1,5 +1,59 @@
 <article>
 	<div>
 		<h1>hello</h1>
-	</div>
+		<canvas id="canvas" width="500" height="400"
+		style="border:1px solid #000000;">
+	</canvas>	
+</div>
 </article>
+
+<script>
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var tilemap = 
+context.beginPath();
+context.moveTo(0, 20);
+context.lineTo(canvas.width, 20);
+context.stroke();
+context.beginPath();
+
+context.beginPath();
+context.fillStyle = 'yellow'
+context.fillRect(188, 50, 200, 100);
+context.stroke();
+
+for (var i=0;i<canvas.height;i++)
+{ 
+
+	for (var j=0;j<canvas.width;j++)
+	{ 
+
+		var mod_i = 20 * i;
+		var mod_j = 20 * j;
+		if (Math.random() < 0.5) {
+			context.beginPath();
+			context.fillStyle = 'yellow'
+			context.fillRect(mod_i, mod_j, 20, 20);
+			context.stroke();
+		} else if(Math.random() * 2 < 0.5) {
+			context.beginPath();
+			context.fillStyle = 'blue'
+			context.fillRect(mod_i, mod_j, 20, 20);
+			context.stroke();
+		} else if(Math.random() < 0.5) {
+			context.beginPath();
+			context.fillStyle = 'green'
+			context.fillRect(mod_i, mod_j, 20, 20);
+			context.stroke();
+		}else{
+			context.beginPath();
+			context.fillStyle = 'red'
+			context.fillRect(mod_i, mod_j, 20, 20);
+			context.stroke();
+		}	
+	}
+}
+
+
+</script>
+
