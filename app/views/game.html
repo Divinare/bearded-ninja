@@ -31,7 +31,7 @@ for (var i=0;i<canvas.height;i++)
 
 		var mod_i = 20 * i;
 		var mod_j = 20 * j;
-		if (Math.random() < 0.5) {
+		if (Math.random() < 0.3) {
 			context.beginPath();
 			context.fillStyle = 'yellow'
 			context.fillRect(mod_i, mod_j, 20, 20);
@@ -49,12 +49,18 @@ for (var i=0;i<canvas.height;i++)
 			context.fillRect(mod_i, mod_j, 20, 20);
 			context.stroke();
 			tilemap[i*20] = 'green';
+		}else if(Math.random() > 0.1) {
+			context.beginPath();
+			context.fillStyle = 'violet'
+			context.fillRect(mod_i, mod_j, 20, 20);
+			context.stroke();
+			tilemap[i*20] = 'violet';
 		}else{
 			context.beginPath();
 			context.fillStyle = 'red'
 			context.fillRect(mod_i, mod_j, 20, 20);
 			context.stroke();
-			tilemap[i*20] = 'yellow';
+			tilemap[i*20] = 'red';
 		}	
 	}
 }
