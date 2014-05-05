@@ -10,7 +10,7 @@
 <script>
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
-var tilemap = 
+var tilemap = []
 context.beginPath();
 context.moveTo(0, 20);
 context.lineTo(canvas.width, 20);
@@ -21,6 +21,7 @@ context.beginPath();
 context.fillStyle = 'yellow'
 context.fillRect(188, 50, 200, 100);
 context.stroke();
+
 
 for (var i=0;i<canvas.height;i++)
 { 
@@ -35,21 +36,25 @@ for (var i=0;i<canvas.height;i++)
 			context.fillStyle = 'yellow'
 			context.fillRect(mod_i, mod_j, 20, 20);
 			context.stroke();
+			tilemap[i*20] = 'yellow';
 		} else if(Math.random() * 2 < 0.5) {
 			context.beginPath();
 			context.fillStyle = 'blue'
 			context.fillRect(mod_i, mod_j, 20, 20);
 			context.stroke();
+			tilemap[i*20] = 'blue';
 		} else if(Math.random() < 0.5) {
 			context.beginPath();
 			context.fillStyle = 'green'
 			context.fillRect(mod_i, mod_j, 20, 20);
 			context.stroke();
+			tilemap[i*20] = 'green';
 		}else{
 			context.beginPath();
 			context.fillStyle = 'red'
 			context.fillRect(mod_i, mod_j, 20, 20);
 			context.stroke();
+			tilemap[i*20] = 'yellow';
 		}	
 	}
 }
