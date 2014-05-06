@@ -17,6 +17,10 @@ angular
         templateUrl: 'views/game.html',
         controller: 'MainCtrl'
       })
+        .when('/ladder', {
+        templateUrl: 'views/ladder.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

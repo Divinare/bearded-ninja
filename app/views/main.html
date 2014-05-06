@@ -5,24 +5,45 @@
     <!-- Main Blog Content -->
     <hr>
     <div class="large-9 columns" role="content">
+      <h1>Image upload</h1>
+
+  <ul ng-controller="MainCtrl">
+    <div class="repeat" ng-repeat="url in urls">
+       {{ url.name }}
+    </div>
+  </ul>
+
+  <ul>
+  <p><img src="http://placehold.it/450x350&text=randomgenid"></p>
+       
+        <form role="form">
+        <div class="form-group">
+          <input class="form-control" type="text" ng-model="blog.user" placeholder="your name"></input>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" ng-model="blog.body" placeholder="content"></textarea>
+        </div>
+        <button>Comment</button>
+
+
+      </form>
+
+
+
+  <p><img src="http://placehold.it/450x350&text=randomgenid"></p>
+
+  <p><img src="http://placehold.it/450x350&text=randomgenid"></p>
+
+  <ul>
+
+
 
 
 
       <article>
-        <h3>Hello world, welcome </h3>
-        <h6>Written by <a href="#">Don Johnson</a> on August 12, 666.</h6>
 
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, animi, ex, earum hic dicta atque laborum molestias quod repellat qui quaerat iste necessitatibus dolore dolores eligendi temporibus aliquam omnis id.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quam rem tenetur modi eveniet iure veritatis. Ratione, quam, quae, doloremque dolor laboriosam veniam fugiat provident nostrum sed beatae ipsam architecto.</p>
-          </div>
-          <div class="large-6 columns">
-            <img src="http://placehold.it/400x240&amp;text=[img]">
-          </div>
-        </div>
-
-        <form action="">
+    <img src="http://placehold.it/400x240&amp;text=[img]">
+    <form action="">
       <input type="text" ng-model="user.name" placeholder="Don Johson"><br>
       <input type="number" ng-model="user.age" name="age" min="9" max="99" placeholder="Age">
     </form>
