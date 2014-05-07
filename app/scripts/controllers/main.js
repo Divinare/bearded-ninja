@@ -4,11 +4,17 @@ var app = angular.module('beardedNinjaApp');
 
 app.factory('Data', function(){
 	var data = {};
-	var URL = 'http://placehold.it/450x350&text=1337';
+
+	var randcol = function(){
+		return (Math.random()*0xFFFFFF<<0).toString(16);
+	};
+
 	var i = 0;
 
 	data.gen = function(){
-		return URL + i++;
+		var URL = 'http://placehold.it/450x350/' + randcol() + '/' + randcol() + '/&text=[1337';
+
+		return URL + i++ + ']';
 	};
 
 	return data;
@@ -21,6 +27,7 @@ app.controller('MainCtrl', function ($scope, Data) {
 
 	$scope.scroll = function scroll () {
 		$scope.urls.push(Data.gen());
-	}
+	};
 
 });
+
