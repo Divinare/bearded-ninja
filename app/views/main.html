@@ -1,75 +1,55 @@
 <!-- Everything goes here -->
 
-<div class="row">
+<div infinite-scroll="scroll()" infinite-scroll-distance="3" class="row">
 
-    <!-- Main Blog Content -->
-    <hr>
-    <div class="large-9 columns" role="content">
-      <h1>Top images</h1>
+  <!-- Main Blog Content -->
+  <hr>
+  <div class="large-9 columns" role="content">
+    <h1>Top images</h1>
 
-  <ul ng-controller="MainCtrl">
-    <div class="repeat" ng-repeat="url in urls">
-       <img style="margin-bottom:15px" src="{{ url.name }}" alt="sampleimg">
+    <div class="repeat" ng-repeat="url in urls">   
+      <a ng-href="{{url}}">
+        <img ng-src="{{url}}" alt="sampleimg" class="mainImage">
+      </a>
     </div>
-  </ul>
 
-  <ul>
-  <p><img src="http://placehold.it/450x350&text=randomgenid"></p>
-       
-        <form role="form">
-        <div class="form-group">
-          <input class="form-control" type="text" ng-model="blog.user" placeholder="your name"></input>
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" rows="3" ng-model="blog.body" placeholder="content"></textarea>
-        </div>
-        <button>Comment</button>
+    <form role="form">
+      <div class="form-group">
+        <input class="form-control" type="text" ng-model="blog.user" placeholder="Your name"></input>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" ng-model="blog.body" placeholder="Add comment"></textarea>
+      </div>
+      <button>Comment</button>
 
-
-      </form>
-  <ul>
-
-
-
-
-
-      <article>
-
-    <form action="">
-      <input type="text" ng-model="user.name" placeholder="Don Johson"><br>
-      <input type="number" ng-model="user.age" name="age" min="9" max="99" placeholder="Age">
     </form>
 
-       <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ut, dolorum maxime numquam nemo excepturi dolores repudiandae magni perspiciatis doloribus autem quae ratione quis explicabo itaque similique officiis. Nobis, dolorem." - <small>Lorem ipsum</small></p>
+  </div>
 
-      </article>
+  <!-- End Main Content -->
 
+
+  <!-- Sidebar -->
+
+  <aside class="large-3 columns">
+
+    <h5>General menu</h5>
+    <ul class="side-nav">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+
+    <div class="panel">
+      <h5>Featured</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, quia cumque nam dignissimos sint repudiandae voluptatem temporibus neque sunt omnis facilis animi? Modi voluptatem pariatur nobis natus sed aspernatur quae.</p>
+      <a href="#">Read More →</a>
     </div>
 
-    <!-- End Main Content -->
+  </aside>
 
-
-    <!-- Sidebar -->
-
-    <aside class="large-3 columns">
-
-      <h5>General menu</h5>
-      <ul class="side-nav">
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-      </ul>
-
-      <div class="panel">
-        <h5>Featured</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, quia cumque nam dignissimos sint repudiandae voluptatem temporibus neque sunt omnis facilis animi? Modi voluptatem pariatur nobis natus sed aspernatur quae.</p>
-        <a href="#">Read More →</a>
-      </div>
-
-    </aside>
-
-    <!-- End Sidebar -->
-  </div>
+  <!-- End Sidebar -->
+</div>

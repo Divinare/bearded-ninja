@@ -9,3 +9,12 @@ input:required:invalid, input:focus:invalid {
     background-position: right top;
     background-repeat: no-repeat;
   }
+
+.mainImage{
+  margin-bottom:15px;
+}
+
+.repeat{
+  margin-top:15px;
+  list-style-type:none;
+}

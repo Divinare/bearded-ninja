@@ -5,7 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'infinite-scroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider
