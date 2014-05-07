@@ -14,7 +14,7 @@ app.factory('Data', function(){
 	data.gen = function(){
 		var URL = 'http://placehold.it/450x350/' + randcol() + '/' + randcol() + '/&text=[1337';
 
-		return URL + i++ + ']';
+		return {url: URL + i++ + ']', id: i};
 	};
 
 	return data;
@@ -23,10 +23,9 @@ app.factory('Data', function(){
 
 app.controller('MainCtrl', function ($scope, Data) {
 
-	$scope.urls = [Data.gen(), Data.gen(), Data.gen()];
-
+	$scope.images = [Data.gen(), Data.gen(), Data.gen()];
 	$scope.scroll = function scroll () {
-		$scope.urls.push(Data.gen());
+		$scope.images.push(Data.gen());
 	};
 
 });
