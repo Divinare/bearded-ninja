@@ -5,11 +5,11 @@
     <!-- Main Blog Content -->
     <hr>
     <div class="large-9 columns" role="content">
-      <h1>Image upload</h1>
+      <h1>Top images</h1>
 
   <ul ng-controller="MainCtrl">
     <div class="repeat" ng-repeat="url in urls">
-       {{ url.name }}
+       <img style="margin-bottom:15px" src="{{ url.name }}" alt="sampleimg">
     </div>
   </ul>
 
@@ -27,13 +27,6 @@
 
 
       </form>
-
-
-
-  <p><img src="http://placehold.it/450x350&text=randomgenid"></p>
-
-  <p><img src="http://placehold.it/450x350&text=randomgenid"></p>
-
   <ul>
 
 
@@ -42,7 +35,6 @@
 
       <article>
 
-    <img src="http://placehold.it/400x240&amp;text=[img]">
     <form action="">
       <input type="text" ng-model="user.name" placeholder="Don Johson"><br>
       <input type="number" ng-model="user.age" name="age" min="9" max="99" placeholder="Age">
