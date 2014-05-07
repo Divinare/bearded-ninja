@@ -1,0 +1,50 @@
+<!-- Everything goes here -->
+
+<div class="row">
+
+  <!-- Main Blog Content -->
+  <hr>
+  <div class="large-9 columns" role="content">
+    <h1>{{image.name}}</h1>
+        <img ng-src="{{image.url}}" alt="sampleimg" class="mainImage">
+
+    <form role="form">
+      <div class="form-group">
+        <input class="form-control" type="text" ng-model="blog.user" placeholder="Your name"></input>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" ng-model="blog.body" placeholder="Add comment"></textarea>
+      </div>
+      <button>Comment</button>
+
+    </form>
+
+  </div>
+
+  <!-- End Main Content -->
+
+
+  <!-- Sidebar -->
+
+  <aside class="large-3 columns">
+
+    <h5>General menu</h5>
+    <ul class="side-nav">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+
+    <div class="panel">
+      <h5>Featured</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, quia cumque nam dignissimos sint repudiandae voluptatem temporibus neque sunt omnis facilis animi? Modi voluptatem pariatur nobis natus sed aspernatur quae.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+  </aside>
+
+  <!-- End Sidebar -->
+</div>
