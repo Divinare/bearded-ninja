@@ -3,7 +3,6 @@
 <div infinite-scroll="scroll()" infinite-scroll-distance="3" class="row">
 
   <!-- Main Blog Content -->
-  <hr>
   <div class="large-9 columns" role="content">
     <h1>Top images</h1>
 
@@ -12,17 +11,6 @@
         <img ng-src="{{image.url}}" alt="sampleimg" class="mainImage">
       </a>
     </div>
-
-    <form role="form">
-      <div class="form-group">
-        <input class="form-control" type="text" ng-model="blog.user" placeholder="Your name"></input>
-      </div>
-      <div class="form-group">
-        <textarea class="form-control" rows="3" ng-model="blog.body" placeholder="Add comment"></textarea>
-      </div>
-      <button>Comment</button>
-
-    </form>
 
   </div>
 
