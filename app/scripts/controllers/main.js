@@ -21,12 +21,13 @@ app.factory('Data', function(){
 });
 
 
-app.controller('MainCtrl', function ($scope, Data) {
+app.controller('MainCtrl', function ($scope, Data, $resource) {
+
+	$resource('/api/edges').query();
 
 	$scope.images = [Data.gen(), Data.gen(), Data.gen()];
 	$scope.scroll = function scroll () {
 		$scope.images.push(Data.gen());
 	};
-
 });
 
