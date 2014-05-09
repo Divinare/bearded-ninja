@@ -27,36 +27,36 @@
 
 
       <!-- Navigation -->
-      <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="#">Bearded Ninja</a></h1>
-          </li>
-          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-
-        <section class="top-bar-section">
-          <!-- Left Nav Section -->
-          <ul class="left">
-            <li><a href="#" data-reveal-id="myModal">Upload a new image</a></li>
-          </ul>
-
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li class="active"><a href="/#/New">New</a></li>
-            <li class="has-dropdown">
-              <a href="#">More</a>
-              <ul class="dropdown">
-                <li><a href="#">About</a></li>
-                <li><a href="#">How to play</a></li>
-              </ul>
+        <nav class="top-bar" data-topbar>
+          
+          <ul class="title-area">
+            <li class="name">
+              <h1><a href="#">Bearded Ninja</a></h1>
             </li>
+            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
           </ul>
 
-        </section>
-      </nav>
+          <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left">
+              <li><a href="#" data-reveal-id="myModal">Upload a new image</a></li>
+            </ul>
 
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="active"><a href="/#/New">New</a></li>
+              <li class="has-dropdown">
+                <a href="#">More</a>
+                <ul class="dropdown">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">How to play</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+        </nav>
 
       <div id="myModal" class="reveal-modal medium" data-reveal>
         <h2>Upload a new image to the gallery</h2>
@@ -65,8 +65,10 @@
             <legend>Fieldset Legend</legend>
 
             <label>New image <small>max size: 1mb</small>
-              <input type="text" placeholder="Browse..">
-            </label>
+              <input type="file" placeholder="Browse..">
+            </label>              
+            <buttton class="button" value="submit">Submit</buttton>
+
           </fieldset>
         </form>
         <a class="close-reveal-modal">&#215;</a>
