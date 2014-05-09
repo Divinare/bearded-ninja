@@ -23,7 +23,7 @@ app.factory('Data', function(){
 
 app.controller('MainCtrl', function ($scope, Data, $resource, $http) {
 
-/*	$resource('/api/images').query(); */
+	/*	$resource('/api/images').query(); */
 
 	$scope.images = [Data.gen(), Data.gen(), Data.gen()];
 	$scope.scroll = function scroll () {
@@ -31,19 +31,19 @@ app.controller('MainCtrl', function ($scope, Data, $resource, $http) {
 	};
 
 	$http.get('http://bearded-ninja-backend.herokuapp.com/images.json').success( function(data, status, headers, config) {
-       console.log(data)
-       $scope.entries = data;
-    });
+		console.log(data)
+		$scope.entries = data;
+	});
 
-    $scope.createImage = function() {
-     Images.create($scope.image).success(function(data, status, headers, config) {
-     console.log('luoto')
-        $scope.entries.push(data);
-     });
-     $scope.flash = "A new image entry '"+$scope.image.subject+"'' created"
-     $scope.formVisible = false;
-     $scope.image = {}
-    }
+	$scope.createImage = function() {
+		Images.create($scope.image).success(function(data, status, headers, config) {
+			console.log('luoto')
+			$scope.entries.push(data);
+		});
+		$scope.flash = "A new image entry '"+$scope.image.subject+"'' created"
+		$scope.formVisible = false;
+		$scope.image = {}
+	}
 
 });
 
