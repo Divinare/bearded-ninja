@@ -21,13 +21,29 @@ app.factory('Data', function(){
 });
 
 
-app.controller('MainCtrl', function ($scope, Data, $resource) {
+app.controller('MainCtrl', function ($scope, Data, $resource, $http) {
 
-	$resource('/api/edges').query();
+/*	$resource('/api/images').query(); */
 
 	$scope.images = [Data.gen(), Data.gen(), Data.gen()];
 	$scope.scroll = function scroll () {
 		$scope.images.push(Data.gen());
 	};
+
+	$http.get('http://bearded-ninja-backend.herokuapp.com/images.json').success( function(data, status, headers, config) {
+       console.log(data)
+       $scope.entries = data;
+    });
+
+    $scope.createImage = function() {
+     Images.create($scope.image).success(function(data, status, headers, config) {
+     console.log('luoto')
+        $scope.entries.push(data);
+     });
+     $scope.flash = "A new image entry '"+$scope.image.subject+"'' created"
+     $scope.formVisible = false;
+     $scope.image = {}
+    }
+
 });
 
