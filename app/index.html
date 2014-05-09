@@ -61,32 +61,26 @@
 
       <div id="myModal" class="reveal-modal medium" data-reveal>
         <h2>Upload a new image to the gallery</h2>
-        <form ng-submit="createImage()">
-          <fieldset>
-            <legend>Fieldset Legend</legend>
 
-        <!--    <label>New image <small>max size: 1mb</small>
-              <input type="file" placeholder="Browse..">
-            </label>    -->
-            name: <input type="text" ng-model="image.name"></input>        
-            <br>
-            subject:
-            <input type="text" ng-model="image.subject"></input>
-            <br>
-            views:
-            <input type="number" ng-model="image.body"></input>
+        <form ng-controller="ImgCtrl">
+          <fieldset>
+            <legend>Fieldset Legend</legend> 
+            <input type="file" ng-file-select="onFileSelect($files)" >
+
             <buttton class="button" value="submit">Submit</buttton>
 
           </fieldset>
         </form>
-        <a class="close-reveal-modal">&#215;</a>
+        <a class="close-reveal-modal" ng-click="upload.abort()">&#215;</a>
+
       </div>
 
 
-      <div class="row"><p><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusantium, neque, fugiat, sunt expedita fuga eaque odio labore officiis aliquam ipsa quos unde soluta voluptas ratione in maxime provident minus.</p>
+      <div class="row"><p><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusantium, neque, fugiat, sunt expedita fuga eaque odio labore officiis aliquam ipsa quos unde soluta voluptas ratione in maxime provident minus.
+      </p>
       </div>
 
-      <hr>
+      <hr>       
 
       <!-- Add your site or application content here -->
 
