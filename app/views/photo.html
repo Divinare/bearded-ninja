@@ -6,8 +6,12 @@
   <hr>
   <div class="large-9 columns" role="content">
     <h1>{{image.name}}</h1>
-        <img ng-src="{{image.url}}" alt="sampleimg" class="mainImage">
-
+    <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
+    <h3>Views {{image.views}}</h3>
+    <ul>
+        <li class="taglist" ng-repeat="tag in image.tags "> <a href="#"> {{tag}} </a></li>
+    </ul>
+    <!-- Paska formi -->
     <form role="form">
       <div class="form-group">
         <input class="form-control" type="text" ng-model="blog.user" placeholder="Your name"></input>
