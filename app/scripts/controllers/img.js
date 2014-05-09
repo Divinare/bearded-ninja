@@ -9,7 +9,8 @@ var ImgCtrl = [ '$scope', '$upload', function($scope, $upload) {
       var file = $files[i];
       $scope.img = {};
       $scope.upload = $upload.upload({
-        url: 'http://uploads.im/api?upload=', //upload.php script, node.js route, or servlet url
+        /*url: 'http://uploads.im/api?upload=',*/ //upload.php script, node.js route, or servlet url
+        url: 'http://bearded-ninja-backend.herokuapp.com/api/images.json',
         data: {myObj: $scope.myModelObj},
         file: file,
         method: 'POST',
