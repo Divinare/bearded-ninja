@@ -4,9 +4,27 @@ Tunnit:
 Ma 3	Aloitus luento ja kotona angularJS ympäristön pystyttämistä
 Ti 2.5	Angular opettelua esim ng-repeat ihmettelyä+tuntikirjanpidon pystytys.
 Ke 4.5  Työympäristön pystytystä koulun koneella ja herokuun deployaamista
-To
+To 6    Backendiin imageluokan luonti ja backend herokuun. Cloudionaryn käyttöönotto sekä imagen uploadaus cloudionaryyn.
 Pe
 La
 Su
 
 
+
+Muistiinpanoja:
+
+heroku pg:reset DATABASE
+heroku run rake db:migrate
+heroku run rake db:seed
+heroku restart
+
+image upload:
+http://jsfiddle.net/vishalvasani/4hqVu/
+
+image upload:
+http://stackoverflow.com/questions/13963022/angularjs-how-to-implement-a-simple-file-upload-with-multipart-form
+
+
+https://devcenter.heroku.com/articles/cloudinary#using-with-ruby-on-rails-upload
+
+http://cloudinary.com/documentation/rails_integration
