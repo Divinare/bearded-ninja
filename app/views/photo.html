@@ -11,15 +11,16 @@
     <ul>
         <li class="taglist" ng-repeat="tag in image.tags "> <a href="#"> {{tag}} </a></li>
     </ul>
-    <!-- Paska formi -->
+    <!-- Form -->
     <form role="form">
       <div class="form-group">
-        <input class="form-control" type="text" ng-model="blog.user" placeholder="Your name"></input>
+        <input class="form-control" type="text" ng-model="comment.name" placeholder="Your name"></input>
       </div>
       <div class="form-group">
-        <textarea class="form-control" rows="3" ng-model="blog.body" placeholder="Add comment"></textarea>
+        <textarea class="form-control" rows="3" ng-model="comment.comment" placeholder="Add comment"></textarea>
       </div>
-      <button>Comment</button>
+      <input type="hidden" name"image_id" ng-model="comment.image_id" value="{{image.id}}"></input>
+      <button ng-click="createComment()">Comment</button>
 
     </form>
 

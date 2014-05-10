@@ -16,12 +16,15 @@ To 7    - Backendiin imageluokan luonti
 Pe 5.5	- Kuvien urlin hakeminen backendistä
 		- Kuvien pushaamisen yritystä frontendistä backendiin ja backendistä pilveen
 
-La 6	- Pushaus onnistuu frontista backendiin ja backendistä pilveen.
+La 10	- Pushaus onnistuu frontista backendiin ja backendistä pilveen.
 		- Img.js korjaus ja siistiminen
 		- Random uniikin nimen generoiminen kuvalle.
 		- Views siistimistä ja editointia kuten esim. etusivun kuville max kuvan koko asetetus (main.css)
+		- Comments luominen backendiin, image/1.json muokkaus ja backendin viewien siistiminen
+		- Commentin lisääminen frontissa niin että tiedot postataan ja lisätään backendiin
 Su
 
+YHT: 33 tuntia
 
 
 Muistiinpanoja:
