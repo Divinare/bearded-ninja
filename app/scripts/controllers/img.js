@@ -3,6 +3,13 @@
 angular.module('beardedNinjaApp', ['angularFileUpload']);
 
 var ImgCtrl = [ '$scope', '$upload', function($scope, $upload) {
+
+  $scope.foo = [{
+  name: "Jee",
+  imageUrl: "jes",
+  views: 1
+  }];
+
   $scope.onFileSelect = function($files) {
     //$files: an array of files selected, each file has name, size, and type.
     for (var i = 0; i < $files.length; i++) {
@@ -11,7 +18,8 @@ var ImgCtrl = [ '$scope', '$upload', function($scope, $upload) {
       $scope.upload = $upload.upload({
         /*url: 'http://uploads.im/api?upload=',*/ //upload.php script, node.js route, or servlet url
         url: 'http://bearded-ninja-backend.herokuapp.com/api/images.json',
-        data: {myObj: $scope.myModelObj},
+        /*data: {image: $scope.myModelObj},*/
+/*        data: {image: $scope.foo},*/
         file: file,
         method: 'POST',
       }).progress(function(evt) {
@@ -23,7 +31,6 @@ var ImgCtrl = [ '$scope', '$upload', function($scope, $upload) {
 
       });
 		
-        console.log($scope.img)
      /*         console.log("upload" + $scope.upload);
         console.log("mymodelobj" + $scope.myModelObj)*/
 
