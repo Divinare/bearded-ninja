@@ -5,10 +5,12 @@
   <!-- Main Blog Content -->
   <div class="large-9 columns" role="content">
     <h1>Top images</h1>
-    <div class="repeat" ng-repeat="image in images">   
+    <div class="repeat" ng-repeat="image in images">  
+      <p><b>{{image.name + " "}}</b></p> 
       <a ng-href="/#/photo/{{image.id}}">
-        <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
+        <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage"  >
       </a>
+      <p>{{"Comments: 0 (puuttuu) views: " + image.views}}</p>
     </div>
 
   </div>
@@ -19,22 +21,6 @@
   <!-- Sidebar -->
 
   <aside class="large-3 columns">
-
-    <h5>General menu</h5>
-    <ul class="side-nav">
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-    </ul>
-
-    <div class="panel">
-      <h5>Featured</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, quia cumque nam dignissimos sint repudiandae voluptatem temporibus neque sunt omnis facilis animi? Modi voluptatem pariatur nobis natus sed aspernatur quae.</p>
-      <a href="#">Read More →</a>
-    </div>
 
   </aside>
 

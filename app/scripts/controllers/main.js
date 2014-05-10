@@ -34,16 +34,5 @@ app.controller('MainCtrl', function ($scope, Data, $resource, $http) {
 	$scope.scroll = function scroll () {
 		$scope.images.push(Data.gen());
 	};
-
-/*	$scope.createImage = function() {
-		Images.create($scope.image).success(function(data, status, headers, config) {
-			console.log('luoto')
-			$scope.entries.push(data);
-		});
-		$scope.flash = "A new image entry '"+$scope.image.subject+"'' created"
-		$scope.formVisible = false;
-		$scope.image = {}
-	}*/
-
 });
 

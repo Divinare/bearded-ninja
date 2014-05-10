@@ -1,12 +1,25 @@
 
-Tunnit:
+Päivä/tunnit:
 
-Ma 3	Aloitus luento ja kotona angularJS ympäristön pystyttämistä
-Ti 2.5	Angular opettelua esim ng-repeat ihmettelyä+tuntikirjanpidon pystytys.
-Ke 4.5  Työympäristön pystytystä koulun koneella ja herokuun deployaamista
-To 6    Backendiin imageluokan luonti ja backend herokuun. Cloudionaryn käyttöönotto sekä imagen uploadaus cloudionaryyn.
-Pe
-La
+Ma 3	- Aloitus luento
+		- Kotona angularJS ympäristön pystyttämistä
+
+Ti 2.5	- Angular opettelua esim ng-repeat ihmettelyä+tuntikirjanpidon pystytys.
+
+Ke 5  	- Työympäristön pystytystä koulun koneella ja herokuun deployaamista.
+
+To 7    - Backendiin imageluokan luonti
+		- Backend herokuun
+		- Cloudionaryn käyttöönotto
+		- Kotihakemistossa olevan imagen uploadaus lokaalisti backendistä pilveen.
+
+Pe 5.5	- Kuvien urlin hakeminen backendistä
+		- Kuvien pushaamisen yritystä frontendistä backendiin ja backendistä pilveen
+
+La 6	- Pushaus onnistuu frontista backendiin ja backendistä pilveen.
+		- Img.js korjaus ja siistiminen
+		- Random uniikin nimen generoiminen kuvalle.
+		- Views siistimistä ja editointia kuten esim. etusivun kuville max kuvan koko asetetus (main.css)
 Su
 
 

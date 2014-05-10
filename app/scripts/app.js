@@ -4,7 +4,8 @@ var app = angular.module('beardedNinjaApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'infinite-scroll'
+  'infinite-scroll',
+  'angularFileUpload'
 ]);
 
 app
