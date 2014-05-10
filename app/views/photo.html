@@ -6,7 +6,7 @@
   <hr>
   <div class="large-9 columns" role="content">
     <h1>{{image.name}}</h1>
-    <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
+    <img my-draggable ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
     <h3>Views {{image.views}}</h3>
     <ul>
         <li class="taglist" ng-repeat="tag in image.tags "> <a href="#"> {{tag}} </a></li>

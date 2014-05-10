@@ -20,6 +20,10 @@ app
     templateUrl: 'views/main.html',
     controller: 'MainCtrl'
   })
+  .when('/new', {
+    templateUrl: 'views/new.html',
+    controller: 'MainCtrl'
+  })
   .when('/photo/:id', {
     templateUrl: 'views/photo.html',
     controller: 'PhotoCtrl'
