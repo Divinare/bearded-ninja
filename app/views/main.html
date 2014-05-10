@@ -5,10 +5,9 @@
   <!-- Main Blog Content -->
   <div class="large-9 columns" role="content">
     <h1>Top images</h1>
-
     <div class="repeat" ng-repeat="image in images">   
       <a ng-href="/#/photo/{{image.id}}">
-        <img ng-src="{{image.url}}" alt="sampleimg" class="mainImage">
+        <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
       </a>
     </div>
 
