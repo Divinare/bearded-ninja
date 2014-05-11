@@ -7,10 +7,10 @@
     <hr>
 
     <header>
-
       <h2>{{image.name}}</h2>
-      <a href="/#/photo/{{image.id + 1}}">      <h1 style="float:right">    Next   <i class="fi-arrow-right"></i>
-      </a>      </h1>
+      <a href="/#/photo/{{image.id + 1}}">      <h1 style="float:right">    Next   <i class="fi-arrow-right"></i>     </a>      </h1>
+      <a href="/#/photo/{{random()}}">      <h1 style="float:right">    Random  </a>      </h1>
+      <a ng-if="image.id !== 0" href="/#/photo/{{image.id -1}}">   <i class="fi-arrow-left"></i>    <h1 style="float:right">    Previous       </a>      </h1>
       <p style="font-size:50">
       <a href="#" id="like"><i class="fi-like"></i></a>
       <a href="" id="dislike"><i class="fi-dislike"></i></a>
