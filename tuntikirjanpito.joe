@@ -29,26 +29,14 @@ Su 8	- Backendiin käyttäjät, kirjautuminen, sessiot jne
         - Imageen tags, name, mature kentät
         - Jsonien muokkausta backendissä
         - Imagen send fix
-        - Commentin send debuggausta
+        - Commentin send debuggausta ja pieni purkkamainen ratkaisu mutta toimii kuitenkin nyt
         - ja muuta jotka unohtui mainita kirjanpidossa
 
-YHT: 33 tuntia
+YHT: 41 tuntia
 
 
-Muistiinpanoja:
 
 heroku pg:reset DATABASE
 heroku run rake db:migrate
 heroku run rake db:seed
 heroku restart
-
-image upload:
-http://jsfiddle.net/vishalvasani/4hqVu/
-
-image upload:
-http://stackoverflow.com/questions/13963022/angularjs-how-to-implement-a-simple-file-upload-with-multipart-form
-
-
-https://devcenter.heroku.com/articles/cloudinary#using-with-ruby-on-rails-upload
-
-http://cloudinary.com/documentation/rails_integration
