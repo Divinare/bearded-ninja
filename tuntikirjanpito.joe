@@ -22,7 +22,15 @@ La 10	- Pushaus onnistuu frontista backendiin ja backendistä pilveen.
 		- Views siistimistä ja editointia kuten esim. etusivun kuville max kuvan koko asetetus (main.css)
 		- Comments luominen backendiin, image/1.json muokkaus ja backendin viewien siistiminen
 		- Commentin lisääminen frontissa niin että tiedot postataan ja lisätään backendiin
-Su
+
+Su 8	- Backendiin käyttäjät, kirjautuminen, sessiot jne
+        - Backendin siistimistä
+        - Img sendaus Korjausta
+        - Imageen tags, name, mature kentät
+        - Jsonien muokkausta backendissä
+        - Imagen send debuggausta
+        - Commentin send debuggausta
+        - ja muuta jotka unohtui mainita kirjanpidossa
 
 YHT: 33 tuntia
 

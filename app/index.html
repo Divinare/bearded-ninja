@@ -65,9 +65,9 @@
             <fieldset>
               <legend>Fieldset Legend</legend> 
               <input type="file" ng-file-select="onFileSelect($files)" >
-              name: <input type="text" placeholder="Image title">
-              tags: <input type="text" placeholder="#Summer, #Holidays, #Weather">
-              Mature content? <input type="checkbox" name="mature">
+              name: <input type="text" ng-model="imgNameObj" placeholder="Image title">
+              tags: <input type="text" ng-model="myTagsObj" placeholder="#Summer, #Holidays, #Weather">
+              Mature content? <input type="checkbox" ng-model="imgMatureObj" name="mature">
               <buttton class="button close-reveal-modal" value="submit">Submit</buttton>
 
             </fieldset>

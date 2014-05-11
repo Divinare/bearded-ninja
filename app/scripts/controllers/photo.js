@@ -43,7 +43,7 @@ app.controller('PhotoCtrl', function ($scope, $routeParams, $http, Comments) {
 		console.log($routeParams.id);
 		console.log(data.name);
 		$scope.image = data;
-
+  }
 
 /*		$scope.createComment = function() {
         $http.post('http://bearded-ninja-backend.herokuapp.com/comments.json', $scope.comment).success( function(data, status, headers, config) {
@@ -51,22 +51,15 @@ app.controller('PhotoCtrl', function ($scope, $routeParams, $http, Comments) {
         });
         $scope.comment = {}
     }*/
-//     $scope.createComment = function() {
-//      Comments.create($scope.comment).success(function(data, status, headers, config) {
-// /*        $scope.entries.push(data);*/
-//      });
-//      $scope.comment = {}
-//     }
+    $scope.createComment = function() {
+     Comments.create($scope.comment).success(function(data, status, headers, config) {
+        $scope.entries.push(data);
+     });
+     $scope.comment = {}
+    }
 
-	});
+  });
 
-	$scope.growViews = function(){
-		$scope.views = $scope.views + 1;
-	}
-
-		$scope.views = 0;
-
-});
 
 app.factory('Comments', function($http){
     var URL_BASE = 'http://bearded-ninja-backend.herokuapp.com/comments';

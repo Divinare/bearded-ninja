@@ -10,6 +10,7 @@ var ImgCtrl = [ '$scope', '$upload', function($scope, $upload) {
       $scope.upload = $upload.upload({
         url: 'http://bearded-ninja-backend.herokuapp.com/images.json',
         method: 'POST',
+        data: {imgName: $scope.imgNameObj, imgTags: $scope.imgTagsObj, imgMature: $scope.imgMatureObj},
         // headers: {'header-key': 'header-value'},
         // withCredentials: true,
         file: file, // or list of files: $files for html5 only
