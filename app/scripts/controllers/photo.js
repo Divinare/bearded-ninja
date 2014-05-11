@@ -36,14 +36,14 @@ var app = angular.module('beardedNinjaApp');
     };
   }]);
 
-app.controller('PhotoCtrl', function ($scope, $routeParams, $http, Comments) {
+app.controller('PhotoCtrl', function($scope, $routeParams, $http, Comments) {
 
 	$http.get('http://bearded-ninja-backend.herokuapp.com/images/' + $routeParams.id + '.json').success( function(data, status, headers, config) {
 		console.log(data);
 		console.log($routeParams.id);
 		console.log(data.name);
 		$scope.image = data;
-  }
+   });
 
 /*		$scope.createComment = function() {
         $http.post('http://bearded-ninja-backend.herokuapp.com/comments.json', $scope.comment).success( function(data, status, headers, config) {
@@ -57,7 +57,7 @@ app.controller('PhotoCtrl', function ($scope, $routeParams, $http, Comments) {
      });
      $scope.comment = {}
     }
-
+    
   });
 
 

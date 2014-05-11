@@ -33,7 +33,7 @@
     </ul>
     <!-- Comments -->
     
-    <div id="comments" name="comments" ng-controller="PhotoCtrl">    
+    <div id="comments" name="comments">    
       <form role="form">
         <div class="form-group">
           <input class="form-control" type="text" ng-model="comment.name" placeholder="Your name"></input>
@@ -41,7 +41,11 @@
         <div class="form-group">
           <textarea class="form-control" rows="3" ng-model="comment.comment" placeholder="Add comment"></textarea>
         </div>
-        <input type="hidden" name"image_id" ng-model="comment.image_id" value="{{image.id}}"></input>
+        <div class="form-group">
+          <input class="form-control" type="text" ng-model="comment.id" placeholder="Image id"></input>
+        </div>
+
+<!--         <input type="hidden" name"image_id" ng-model="comment.image_id" value="{{image.id}}"></input> -->
         <button ng-click="createComment()">Comment</button>
         
       </form></div>
