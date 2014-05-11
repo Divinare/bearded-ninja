@@ -1,6 +1,6 @@
 <!-- Everything goes here -->
 
-<div infinite-scroll="scroll()" infinite-scroll-distance="3" class="row">
+<div infinite-scroll="scroll()" infinite-scroll-distance="1" class="row">
 
   <!-- Main Blog Content -->
   <div class="large-9 columns" role="content">
@@ -8,6 +8,7 @@
     <div class="repeat" ng-repeat="image in images | orderBy: '-created_at' | limitTo: 5">   
       <a ng-href="/#/photo/{{image.id}}">
         <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
+        <p>{{image.created_at}}</p>
       </a>
     </div>
 

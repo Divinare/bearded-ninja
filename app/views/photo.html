@@ -3,38 +3,67 @@
 <div class="row">
 
   <!-- Main Blog Content -->
-  <hr>
   <div class="large-9 columns" role="content">
-    <h1>{{image.name}}</h1>
-    <img my-draggable ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage">
-    <h3>Views {{image.views}}</h3>
-    <ul>
-        <li class="taglist" ng-repeat="tag in image.tags "> <a href="#"> {{tag}} </a></li>
+    <hr>
+
+    <header>
+
+      <h2>{{image.name}}</h2>
+      <a href="/#/photo/{{image.id + 1}}">      <h1 style="float:right">    Next   <i class="fi-arrow-right"></i>
+      </a>      </h1>
+      <p style="font-size:50">
+      <a href="#" id="like"><i class="fi-like"></i></a>
+      <a href="" id="dislike"><i class="fi-dislike"></i></a>
+    </p>
+
+      <p>
+        <!-- Image url as points -->
+        <a href="/#/photo/{{image.id}}"> {{image.points}} points </a> ∞ <a href="/#/photo/{{image.id}}#comments"> {{image.commentAmount}} comments</a>
+      </p>
+
+    </header>
+
+
+    <img my-draggable ng-src="{{image.imageUrl}}"  alt="{{image.name}}" class="mainImage">
+    <!-- <h3>Views {{image.views}}</h3> -->
+    <ul><!-- 
+      <li class="taglist" <ng-repeat="tag in image.tags "> <a href="#"> {{tags}} </a></li> -->
+      {{image.tags}}
+      <hr>
     </ul>
-    <!-- Form -->
-    <form role="form">
-      <div class="form-group">
-        <input class="form-control" type="text" ng-model="comment.name" placeholder="Your name"></input>
-      </div>
-      <div class="form-group">
-        <textarea class="form-control" rows="3" ng-model="comment.comment" placeholder="Add comment"></textarea>
-      </div>
-      <input type="hidden" name"image_id" ng-model="comment.image_id" value="{{image.id}}"></input>
-      <button ng-click="createComment()">Comment</button>
+    <!-- Comments -->
+    
+    <div id="comments" name="comments">    
+      <form role="form">
+        <div class="form-group">
+          <input class="form-control" type="text" ng-model="comment.name" placeholder="Your name"></input>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" ng-model="comment.comment" placeholder="Add comment"></textarea>
+        </div>
+        <input type="hidden" name"image_id" ng-model="comment.image_id" value="{{image.id}}"></input>
+        <button ng-click="createComment()">Comment</button>
+        
+      </form></div>
 
-    </form>
+    </div>
 
+    <!-- End Main Content -->
+
+
+    <!-- Sidebar -->
+
+    <aside style="overflow:hidden" class="large-3 columns">
+      <h2>Comments</h2>
+      <div class="comment-repeat" ng-repeat="cmt in image.comments">
+        <p><strong>{{cmt.name}}</strong> commented:
+          <i>{{cmt.comment}}</i>
+
+        </p>
+
+      </div>
+
+    </aside>
+
+    <!-- End Sidebar -->
   </div>
-
-  <!-- End Main Content -->
-
-
-  <!-- Sidebar -->
-
-  <aside class="large-3 columns">
-
-
-  </aside>
-
-  <!-- End Sidebar -->
-</div>

@@ -10,11 +10,10 @@ app.factory('Data', function(){
 	};
 
 	var i = 0;
-
 	data.gen = function(){
 		var URL = 'http://placehold.it/450x350/' + randcol() + '/' + randcol() + '/&text=[1337';
 
-		return {imageUrl: URL + i++ + ']', id: i};
+		return {imageUrl: URL + i++ + ']', id: i, created_at: event.timeStamp};
 	};
 
 	return data;
@@ -27,7 +26,7 @@ app.controller('MainCtrl', function ($scope, Data, $resource, $http) {
 
 	// $scope.images = [Data.gen(), Data.gen(), Data.gen()];
 
-	$http.get('http://bearded-ninja-backend.herokuapp.com/api/images.json').success( function(data, status, headers, config) {
+	$http.get('http://bearded-ninja-backend.herokuapp.com/images.json').success( function(data, status, headers, config) {
 		console.log(data)
 		$scope.images = data;
 	});

@@ -16,6 +16,8 @@
   <!-- build:css({.tmp,app}) styles/main.css -->
   <link rel="stylesheet" href="styles/foundation.css" />
   <script src="scripts/vendor/modernizr.js"></script>
+      <link rel="stylesheet" href="styles/foundation-icons.css" />
+
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
@@ -26,7 +28,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
 
-
+  
       <!-- Navigation -->
       <nav class="top-bar" data-topbar>
 
@@ -41,51 +43,72 @@
         <section class="top-bar-section">
           <!-- Left Nav Section -->
           <ul class="left">
-            <li><a href="#" data-reveal-id="myModal">Upload a new image</a></li>
+            <li><a href="#" data-reveal-id="uploadNew">Upload a new image</a></li>
           </ul>
 
           <!-- Right Nav Section -->
           <ul class="right">
-            <li><a href="/#/signup">Create account</a></li>
-            <li class="active"><a href="/#/login">Login</a></li>
-            <li class="has-dropdown">
-          </ul>
-        </section>
+            <!-- <li><a href="/#/signup">Create account</a></li> -->
+            <!-- <li class="active"><a href="/#/login">Login</a></li> -->
+            <li><a href="#" data-reveal-id="login">Login</a></li>
+            <li class="active"><a href="/#/new">Fresh</a></li>
+          </section>
 
-      </nav>
+        </nav>
+        <br>  
+        <hr>
 
-      <div id="myModal" class="reveal-modal medium" data-reveal>
-        <h2>Upload a new image to the gallery</h2>
+        <div id="uploadNew" class="reveal-modal medium" data-reveal>
+          <h2>Upload a new image to the gallery</h2>
 
-        <form ng-controller="ImgCtrl">
-          <fieldset>
-            <legend>Fieldset Legend</legend> 
-            <input type="file" ng-file-select="onFileSelect($files)" >
-            name: <input type="text" placeholder="Image title">
-            tags: <input type="text" placeholder="#Summer, #Holidays, #Weather">
-            Mature content? <input type="checkbox" name="mature">
-            <buttton class="button close-reveal-modal" value="submit">Submit</buttton>
+          <form ng-controller="ImgCtrl">
+            <fieldset>
+              <legend>Fieldset Legend</legend> 
+              <input type="file" ng-file-select="onFileSelect($files)" >
+              name: <input type="text" placeholder="Image title">
+              tags: <input type="text" placeholder="#Summer, #Holidays, #Weather">
+              Mature content? <input type="checkbox" name="mature">
+              <buttton class="button close-reveal-modal" value="submit">Submit</buttton>
 
-          </fieldset>
-        </form>
-        <a class="close-reveal-modal" ng-click="upload.abort()">&#215;</a>
+            </fieldset>
+          </form>
+          <a class="close-reveal-modal" ng-click="upload.abort()">&#215;</a>
 
-      </div>  
+        </div>
 
-      <!-- Add your site or application content here -->
+        <div id="login" class="reveal-modal medium" data-reveal>
+          <h2>Upload a new image to the gallery</h2>
 
-      <div class="container" ng-view=""></div>
+          <form ng-controller="ImgCtrl">
+            <fieldset>
+              <legend>Fieldset Legend</legend>
+              Username/email: <input type="text" placeholder="Image title">
+              Password: <input type="password" placeholder="xxxxxxx">
+              
+              <input type="checkbox" name="rememberLogin"> Stay logged in
+              <br>
+              <buttton class="button" value="submit">Submit</buttton>
 
-      <footer class="row">
-        <div class="large-12 columns">
-          <hr>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>© Div & mxO</p>
+            </fieldset>
+          </form>
+          <a class="close-reveal-modal" ng-click="upload.abort()">&#215;</a>
+
+        </div>  
+
+        <!-- Add your site or application content here -->
+
+        <div class="container" ng-view=""></div>
+
+        <footer class="row">
+          <div class="large-12 columns">
+            <hr>
+            <div class="row">
+              <div class="large-6 columns">
+                <p>© Div & mxO</p>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>

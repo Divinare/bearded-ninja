@@ -4,14 +4,45 @@
 
   <!-- Main Blog Content -->
   <div class="large-9 columns" role="content">
-    <h1>Top images</h1>
+    <h3>Top images</h3>
+    <hr>
+
+    <!-- Single image view -->
     <div class="repeat" ng-repeat="image in images">  
-      <p><b>{{image.name + " "}}</b></p> 
-      <a ng-href="/#/photo/{{image.id}}">
-        <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage"  >
-      </a>
-      <p>{{"Comments: 0 (puuttuu) views: " + image.views}}</p>
+      <!-- header -->
+      <header>
+
+        <h2>{{image.name}}</h2>
+        <a href="#" id="like"><i class="fi-like"></i></a>
+        <a href="" id="dislike"><i class="fi-dislike"></i></a>
+
+        <p>
+          <!-- Image url as points -->
+          <a href="/#/photo/{{image.id}}" alt="{{image.name}}"> {{image.points}} points </a> ∞ <a href="/#/photo/{{image.id}}#comments"> 
+          {{image.comments_amount}} comments</a>
+        </p>
+
+      </header>
+      <!-- /header -->
+
+      <!-- Image -->
+      <div id="mainImage">
+        <a ng-href="/#/photo/{{image.id}}">
+          <img ng-src="{{image.imageUrl}}" alt="sampleimg" class="mainImage"  ></a>
+        <!-- /Image -->
+      </div>
+      <br>
+      <!-- social share -->
+      <div id="social-share">
+        <i class="fi-social-facebook"></i>
+        <i class="fi-social-twitter"></i>
+        <i class="fi-social-reddit"></i>
+        <i class="fi-social-google-plus"></i>
+      </div>
+      <!-- /social share -->
+      <hr>
     </div>
+    <!-- /Single image view -->
 
   </div>
 
@@ -21,7 +52,14 @@
   <!-- Sidebar -->
 
   <aside class="large-3 columns">
-
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
   </aside>
 
   <!-- End Sidebar -->

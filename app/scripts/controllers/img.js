@@ -8,7 +8,7 @@ var ImgCtrl = [ '$scope', '$upload', function($scope, $upload) {
     for (var i = 0; i < $files.length; i++) {
       var file = $files[i];
       $scope.upload = $upload.upload({
-        url: 'http://bearded-ninja-backend.herokuapp.com/api/images.json',
+        url: 'http://bearded-ninja-backend.herokuapp.com/images.json',
         method: 'POST',
         // headers: {'header-key': 'header-value'},
         // withCredentials: true,
